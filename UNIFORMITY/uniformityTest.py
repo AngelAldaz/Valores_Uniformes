@@ -40,9 +40,9 @@ def test_sequencePlant(sampleLen, baseInterv, frecObs, frecEsp):
   jiCuadrada = float(input(f'Asumiendo que \'a = 5%\', consulta la tabla de distribucion de Ji-Cuadrada para X²(5%,{numClas-1}) e ingresalo: '))
   
   if jiCalculada < jiCuadrada:
-    print(f'\nComo la X² observada ({jiCalculada}) es MENOR que la X²(5%,{numClas-1}) tabulada ({jiCuadrada}), no se puede rechazar la hipótesis de que los números generados provienen de una distribución uniforme.')
+    print(f'\nComo la X² observada ({jiCalculada}) es MENOR que la X²(5%,{numClas-1}) tabulada ({jiCuadrada}), no se puede rechazar la hipótesis de que los números generados provienen de una distribución uniforme.\n\n')
   else:
-    print(f'\nComo la X² observada ({jiCalculada}) es MAYOR que la X²(5%,{numClas-1}) tabulada ({jiCuadrada}), es posible rechazar la hipótesis de que los números generados provienen de una distribución uniforme.')
+    print(f'\nComo la X² observada ({jiCalculada}) es MAYOR que la X²(5%,{numClas-1}) tabulada ({jiCuadrada}), es posible rechazar la hipótesis de que los números generados provienen de una distribución uniforme.\n\n')
   
   
 def dataStructure(frecEsp, frecObs, sampleLen):
