@@ -2,9 +2,6 @@ import math
 import pandas as pd
 from multiplicativeCongruentMethod import modular_sequence
 
-#EDITAR POR CANTIDAD DE NUM ALEATORIOS
-cant = 10
-
 def factorial(n):
     # Calcular el factorial de n
     if n == 0:
@@ -38,7 +35,7 @@ def generar_datos_combinados(numeros_aleatorios, rangos):
     # Generar datos combinados
     datos_combinados = []
     for i, (inicio, fin) in enumerate(rangos, start=1):
-        numeros_en_rango = [numero for numero in numeros_aleatorios[:cant] if inicio <= numero < fin]
+        numeros_en_rango = [numero for numero in numeros_aleatorios[:10] if inicio <= numero < fin]
         numeros_indexados = [(numeros_aleatorios.index(num) + 1, num) for num in numeros_en_rango]
         numeros_indexados_str = ' - '.join([f"{indice}) {valor:.4f}" for indice, valor in numeros_indexados])
         datos_combinados.append([f"{i}", f"{inicio:.4f} - {fin:.4f}", numeros_indexados_str])
@@ -47,7 +44,7 @@ def generar_datos_combinados(numeros_aleatorios, rangos):
 def resultado(numeros_aleatorios, rangos):
     # Generar datos de resultado
     datos_combinados = []
-    numeros_indexados = [(numeros_aleatorios.index(num), num) for num in numeros_aleatorios[:cant]]
+    numeros_indexados = [(numeros_aleatorios.index(num), num) for num in numeros_aleatorios[:10]]
     numeros_indexados.sort()
     for indice, num in numeros_indexados:
         for i, (inicio, fin) in enumerate(rangos, start=1):

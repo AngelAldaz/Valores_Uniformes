@@ -18,7 +18,6 @@ import pandas as pd
 import os
 
 def modular_sequence(a,m,X0) -> tuple:
-
   n = []
   Xn = [X0]
   rDR = []
