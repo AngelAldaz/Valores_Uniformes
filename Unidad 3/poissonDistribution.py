@@ -3,7 +3,7 @@ import pandas as pd
 from multiplicativeCongruentMethod import modular_sequence
 
 #EDITAR POR CANTIDAD DE NUM ALEATORIOS
-cant = 10
+cant = 100
 
 def factorial(n):
     # Calcular el factorial de n
