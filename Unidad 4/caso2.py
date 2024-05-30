@@ -6,7 +6,7 @@ MIU -> FALSE
 ZOBS
 """
 
-from validation_tabulation import zTab,desplegar
+from validation_tabulation import zTabNormal,desplegar
 
 def zObs(x1: int, x2: int, varianza: int, N1: int, N2: int) -> float:
   return ((x1-x2)/((varianza/N1)+(varianza/N2)))
@@ -19,7 +19,7 @@ def main():
   varianza = 3.1
   a = 0.05
   
-  desplegar(a,zTab(a),zObs(X1,X2,varianza,N1,N2))
+  desplegar(a,zTabNormal(a),zObs(X1,X2,varianza,N1,N2))
   
   
 if __name__ == '__main__':

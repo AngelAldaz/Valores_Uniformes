@@ -7,7 +7,7 @@ ZOBS
 """
 
 from math import sqrt
-from validation_tabulation import zTab,desplegar
+from validation_tabulation import zTabNormal,desplegar
 
 def zObs(x: int, miu: int, sVar: int, N: int) -> float:
   return (x-miu)/(sVar/sqrt(N))
@@ -19,7 +19,7 @@ def main():
   N = 60
   a = 0.02
   
-  desplegar(a,zTab(a),zObs(x,miu,sVar,N))
+  desplegar(a,zTabNormal(a),zObs(x,miu,sVar,N))
   
 if __name__ == '__main__':
   main()
