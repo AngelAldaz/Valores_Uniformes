@@ -36,7 +36,11 @@ class Cases:
         self.caseFour()
       else:
         self.caseFive()
-        
+    else:
+      if (self.N1 > 30 and self.N1 == self.N2) or (self.N2 > 30 and self.N1 != self.N2):
+        self.caseSix()
+      else:
+        print("nada")
           
   def caseOne(self):
     """
@@ -79,10 +83,14 @@ class Cases:
     r = ( self.x1 - self.x2 ) / ( ( sqrt(((self.s1*self.N1)+ (self.s2*self.N2))/((self.N1+self.N2)/2)) ) * ( sqrt( ( 1 / self.N1 ) + ( 1 / self.N2 ) )  ) )
     print("Caso 5\n")
     desplegar(self.a,tTabStudent(self.a, (self.N1 + self.N2 - 1)),r)
-    
+  
+  def caseSix(self):
+    r = (self.x1 - self.x2) / sqrt( ( self.s1 / ( self.N1 - 1 ) ) + ( self.s2 / ( self.N2 - 1 ) ) )
+    print("Caso 6\n")
+    desplegar(self.a,zTabNormal(self.a),r)
     
 def main():
-  
+  """
   #CASO 1
   x = 249.7
   miu = 245
@@ -90,8 +98,7 @@ def main():
   N = 31
   a = 0.05
   c = Cases(x=x,miu=miu,sVar=sVar,N=N,a=a)
-  
-  
+  """
   """
   #CASO 2
   x1 = 23
@@ -142,6 +149,18 @@ def main():
   a = 0.05
   c = Cases(N1 = N1, N2 = N2, s1 = s1, s2 = s2, x1 = x1, x2 = x2, a = a)
   """
+  
+  
+  #CASO 6
+  N1 = 12
+  N2 = 32
+  s1 = 2396.0071
+  s2 = 1440.0606
+  x1 =  147.8437
+  x2 = 182.6666
+  a = 0.05
+  c = Cases(N1 = N1, N2 = N2, s1 = s1, s2 = s2, x1 = x1, x2 = x2, a = a)
+  
   c.accion()
 
 if __name__ == '__main__':
